@@ -1,0 +1,17 @@
+package poo;
+
+public class Uso_Coche {
+	
+	public static void main(String[] args) {
+		Coche micoche=new Coche(); //Instanciar una clase, ejemplar de clase
+		micoche.establece_color("rojo");//Uso de metodo setter
+		System.out.println(micoche.dime_datos_generales());
+		System.out.println(micoche.dime_color());//Uso de metodo getter
+		micoche.establece_asientos("si");
+		System.out.println(micoche.dime_asientos());
+		micoche.establece_climatizador("si");
+		System.out.println(micoche.dime_climatizador());
+		System.out.println(micoche.dime_peso_coche());
+	}
+
+}
