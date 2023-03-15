@@ -1,0 +1,28 @@
+
+public class Uso_constantes {
+
+	public static void main(String[] args) {
+		Empleados trabajador1=new Empleados("Paco", 1);
+		Empleados trabajador2=new Empleados("Felipe", 2);
+		trabajador1.cambiaSeccion("RRHH");
+		System.out.println(trabajador1.devuelveDatos());
+		System.out.println(trabajador2.devuelveDatos());
+	}
+}
+
+class Empleados{
+	public Empleados(String nom, int Id) {
+		nombre=nom;
+		seccion="Administración";
+		this.Id=Id;
+	}
+	public void cambiaSeccion(String seccion) {//setter
+		this.seccion=seccion;
+	}
+	public String devuelveDatos() {
+		return "El nombre es: " + nombre + ", la seccion es: " + seccion + " Y el ID=  " + Id;
+	}
+	private final String nombre;
+	private String seccion;
+	private int Id;
+}
