@@ -12,11 +12,10 @@ public class Uso_empleado {
 		System.out.println("Nombre: " + empleado2.dameNombre() + " Sueldo: " + empleado2.dameSueldo() + " Fecha de alta: " + empleado2.dameFecha());
 		System.out.println("Nombre: " + empleado3.dameNombre() + " Sueldo: " + empleado3.dameSueldo() + " Fecha de alta: " + empleado3.dameFecha());*/
 		
-		Empleado[] misEmpleados=new Empleado[4];
+		Empleado[] misEmpleados=new Empleado[3];
 		misEmpleados[0]=new Empleado("Yeison Gomez", 85000, 2004, 04, 15);
 		misEmpleados[1]=new Empleado("Andrea Lopez", 95000, 1995, 06, 01);
 		misEmpleados[2]=new Empleado("Santiago faura", 105000, 2010, 01, 01);
-		misEmpleados[3]=new Empleado("Milena Pedraza");
 	  /*for(int i=0; i<3; i++) {
 			misEmpleados[i].subeSueldo(5);
 		}*/
@@ -39,9 +38,6 @@ class Empleado{
 		GregorianCalendar calendario=new GregorianCalendar(agno, mes-1, dia);
 		altaContrato=calendario.getTime();
 	}
-	public Empleado(String nom) {
-		this(nom, 30000, 2000,01,01);
-	}
 	
 	public String dameNombre() {//getter
 		return nombre;
@@ -53,7 +49,7 @@ class Empleado{
 		return altaContrato;
 	}
 	
-	public void subeSueldo(double porcentaje) {//Setter
+	public void subeSueldo(double porcentaje) {
 		double aumento=sueldo*porcentaje/100;
 		sueldo+=aumento;
 	}
