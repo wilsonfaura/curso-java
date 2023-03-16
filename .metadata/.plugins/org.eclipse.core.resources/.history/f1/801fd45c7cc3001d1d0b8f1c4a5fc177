@@ -61,7 +61,7 @@ public class Coche {
 		}
 	}
 	
-	public String dime_peso_coche() {//Setter y Getter
+	public String dime_peso_coche() {
 		int peso_carroceria=500;
 		peso_total=peso_plataforma+peso_carroceria;
 		if(asientos_cuero==true) {
@@ -73,7 +73,7 @@ public class Coche {
 		return "El peso del coche es " + peso_total;
 	}
 	
-	public int precio_coche() {//Setter y Getter
+	public int precio_coche() {
 		int precio_final=10000;
 		if(asientos_cuero==true) {
 			precio_final+=2000;
