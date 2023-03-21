@@ -37,7 +37,7 @@ public class Uso_empleado {
 	}
 }
 
-class Empleado{//podemos poner el modificador final adelante de la clase para no permitir que esta clase siga heredando a otras clases como la clase Jefatura
+class Empleado{
 	public Empleado(String nom, double sue, int agno, int mes, int dia) {//Metodo constructor de la clase empleado
 		nombre=nom;
 		sueldo=sue;
@@ -54,7 +54,7 @@ class Empleado{//podemos poner el modificador final adelante de la clase para no
 		return nombre + " Id: " + Id;
 	}
 	public double dameSueldo() {//getter
-		return sueldo;//podemos poner el modificador final para que este metodo no pueda ser reescritomas adelante en este caso seria dameSueldo de la clase jefatura
+		return sueldo;
 	}
 	public Date dameFecha() {//getter
 		return altaContrato;
@@ -86,5 +86,9 @@ class Jefatura extends Empleado{
 	private double incentivo;
 }
 
-
+class Director extends Jefatura{
+	public Director(String nom, double sue, int agno, int mes, int dia) {
+		super(nom, sue, agno, mes, dia);
+	}
+}
 

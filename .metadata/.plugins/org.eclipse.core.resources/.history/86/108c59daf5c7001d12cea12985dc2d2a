@@ -20,7 +20,7 @@ public class Uso_empleado {
 		misEmpleados[3]=new Empleado("Milena Pedraza");
 		misEmpleados[4]=jefe_RRHH;//Polimorfismo en accion
 		misEmpleados[5]=new Jefatura("Maria", 95000, 1999,5,26);
-		Jefatura jefe_finanzas=(Jefatura) misEmpleados[5];//Refundicion o casting de objetos
+		Jefatura jefe_finanzas=(Jefatura) misEmpleados[2];//Refundicion o casting
 		jefe_finanzas.estableceIncentivo(55000);
 		/*for(int i=0; i<3; i++) {
 			misEmpleados[i].subeSueldo(5);
@@ -37,7 +37,7 @@ public class Uso_empleado {
 	}
 }
 
-class Empleado{//podemos poner el modificador final adelante de la clase para no permitir que esta clase siga heredando a otras clases como la clase Jefatura
+class Empleado{
 	public Empleado(String nom, double sue, int agno, int mes, int dia) {//Metodo constructor de la clase empleado
 		nombre=nom;
 		sueldo=sue;
@@ -54,7 +54,7 @@ class Empleado{//podemos poner el modificador final adelante de la clase para no
 		return nombre + " Id: " + Id;
 	}
 	public double dameSueldo() {//getter
-		return sueldo;//podemos poner el modificador final para que este metodo no pueda ser reescritomas adelante en este caso seria dameSueldo de la clase jefatura
+		return sueldo;
 	}
 	public Date dameFecha() {//getter
 		return altaContrato;
@@ -85,6 +85,4 @@ class Jefatura extends Empleado{
 	}
 	private double incentivo;
 }
-
-
 
