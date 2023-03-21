@@ -1,0 +1,39 @@
+package poo;
+
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class Uso_persona {
+
+	public static void main(String[] args) {
+	 
+	}
+
+}
+
+class Empleado2{//podemos poner el modificador final adelante de la clase para no permitir que esta clase siga heredando a otras clases como la clase Jefatura
+	public Empleado2(String nom, double sue, int agno, int mes, int dia) {//Metodo constructor de la clase empleado
+		sueldo=sue;
+		GregorianCalendar calendario=new GregorianCalendar(agno, mes-1, dia);
+		altaContrato=calendario.getTime();
+		++IdSiguiente;
+		Id=IdSiguiente;
+	}
+
+	public double dameSueldo() {//getter
+		return sueldo;//podemos poner el modificador final para que este metodo no pueda ser reescritomas adelante en este caso seria dameSueldo de la clase jefatura
+	}
+	public Date dameFecha() {//getter
+		return altaContrato;
+	}
+	
+	public void subeSueldo(double porcentaje) {//Setter
+		double aumento=sueldo*porcentaje/100;
+		sueldo+=aumento;
+	}
+	//Declaración de variables
+	private double sueldo;
+	private Date altaContrato;
+	private static int IdSiguiente;
+	private int Id;
+}
