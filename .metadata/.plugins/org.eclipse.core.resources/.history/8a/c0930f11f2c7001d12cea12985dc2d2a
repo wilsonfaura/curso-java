@@ -30,7 +30,7 @@ public class Uso_empleado {
 			System.out.println("Nombre: " + misEmpleados[i].dameNombre() + " Sueldo: " + misEmpleados[i].dameSueldo() + " Fecha de alta: " + misEmpleados[i].dameFecha());
 		}*/
 		for(Empleado e: misEmpleados) {
-			System.out.println(" Nombre: " + e.dameNombre() + " Sueldo: " + e.dameSueldo() + " Fecha de alta: " + e.dameFecha());
+			System.out.println("Nombre: " + e.dameNombre() + " Sueldo: " + e.dameSueldo() + " Fecha de alta: " + e.dameFecha());
 		}
 	}
 }
@@ -49,7 +49,7 @@ class Empleado{
 	}
 	
 	public String dameNombre() {//getter
-		return nombre + " Id: " + Id;
+		return nombre + "Id: " + Id;
 	}
 	public double dameSueldo() {//getter
 		return sueldo;

@@ -49,7 +49,7 @@ class Empleado{
 	}
 	
 	public String dameNombre() {//getter
-		return nombre + " Id: " + Id;
+		return nombre + "Id: " + Id;
 	}
 	public double dameSueldo() {//getter
 		return sueldo;
